@@ -1,8 +1,8 @@
 from ..externos import clientes as cli
 from ..externos import proveedores as pro
-import articulos as art
+from . import articulos as art
 
-type t_factura = dict[str, str | int | float]
+t_factura = dict[str, str | int | float]
 
 def generar_facturas() -> list[t_factura]:
     facturas: list[t_factura] = []
@@ -20,4 +20,3 @@ def generar_facturas() -> list[t_factura]:
     return facturas
 
 facturas_generadas = generar_facturas()
-print(facturas_generadas)
